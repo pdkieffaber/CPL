@@ -78,7 +78,8 @@ for sub=1:length(filelist)
     EEG = pop_editset(EEG, 'run', [], 'icaweights', 'ALLEEG(2).icaweights', 'icasphere', 'ALLEEG(2).icasphere', 'icachansind', 'ALLEEG(2).icachansind');
     [ALLEEG EEG] = eeg_store(ALLEEG, EEG, CURRENTSET);
     EEG = eeg_checkset( EEG );
-    EEG = pop_delset( EEG, [1] );
+    eeglab redraw
+    ALLEEG = pop_delset( ALLEEG, [2] ); %08/28/24 changed EEG to ALLEEG
     eeglab redraw
     
     EEG = pop_iclabel(EEG, 'default');
@@ -91,7 +92,7 @@ for sub=1:length(filelist)
     
     %Inspect/Reject ICA components
     pop_eegplot( EEG, 0, 1, 1);
-    pop_selectcomps(EEG,[1:size(EEG.icaact,1)]);
+    pop_selectcomps(EEG,[1:size(EEG.icaweights,1)]); %08/28/24 changed from icaact to icaweights
     waitfor( findobj('parent', gcf, 'string', 'OK'), 'userdata');
     [ALLEEG EEG] = eeg_store(ALLEEG, EEG, CURRENTSET);
     EEG = pop_subcomp( EEG, [], 0);
