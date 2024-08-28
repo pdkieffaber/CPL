@@ -1,0 +1,1 @@
+This is a collection of scripts automating (1) a cleaning and analysis pipeline for files in BrainVision's .eeg format, (2) computing ERPs from processed data, and (3)  conducting a spatio-temporal PCA analysis.
