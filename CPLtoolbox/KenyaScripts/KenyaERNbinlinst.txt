@@ -1,0 +1,31 @@
+bin 1
+AllCorrect
+{10,20,30,40}.{100,200}{t<1-1500>205,207}
+
+bin 2
+AllIncorrect
+{10,20,30,40}.{100,200}{t<1-1500>206,208}
+
+bin 3
+CorrectLeft
+{10,20}.{100}
+
+bin 4
+CorrectRight
+{30,40}.{200}
+
+bin 5
+IncorrectLeft
+{10,20}.{200}
+
+bin 6
+IncorrectRight
+{30,40}.{100}
+
+bin 7
+CongruentStimCorrect
+.{10,30}{100,200}{t<1-1500>205,207}
+
+bin 8
+IncongruentStimCorrect
+.{20,40}{100,200}{t<1-1500>205,207}

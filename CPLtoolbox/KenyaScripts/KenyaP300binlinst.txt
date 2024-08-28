@@ -1,0 +1,23 @@
+bin 1
+Standard
+.{10}
+
+bin 2
+Rare
+.{20}
+
+bin 3
+Standard_correct
+.{10}{~t<1-1000>200}
+
+bin 4
+Rare_correct
+.{20}{t<1-1000>200}
+
+bin 5
+Response_correct
+{20}.{t<1-1000>200}
+
+bin 6
+Response_incorrect
+{10}.{t<1-1000>200}
